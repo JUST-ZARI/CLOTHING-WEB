@@ -1,0 +1,374 @@
+/*Global reset*/
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+body {
+display:flex;  
+overflow-x: hidden; 
+flex-direction: column;
+min-height: 100vh;
+background-position: center top;
+background-repeat: no-repeat; 
+}
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #636363;
+  z-index: 1000;
+  box-shadow: 0 4px 8px #fcf9f9;
+}
+nav {
+    position: fixed; /* Keeps it at the top while scrolling */
+    width: 100%;
+    background-color: #222; /* Dark theme */
+    color: white;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread content */
+    box-shadow: 0px 4px 10px #fcf9f9; /* Add shadow */
+    z-index: 1000; /* Ensures it's above other elements */
+}
+nav #web-namelogo h1{
+    color: white;
+    /* Logo color */
+    padding: 5px 35px 1px;
+    font-weight: 600;
+    font-size: 35px; 
+    /* Logo font size */
+}
+nav ul{
+  display: flex;
+    gap: 50px; 
+    /* Spacing between navigation links */
+}
+/* Styling for navigation links */
+nav ul li a{
+  display: block;
+  padding: 10px 35px 2px;
+  font-size: 100%;
+  color: white;
+   /* Text color */
+  border-radius: 30px; 
+  /* Rounded corners */
+  transition: all 0.3s ease; 
+  /* Smooth transition for hover effect */
+  text-decoration: none;
+   /* Remove underline */
+}
+
+nav ul li a:hover {
+    color: #ff416c; 
+    text-decoration: underline; /* Underline appears on hover */
+    /* Text color on hover */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-toggle {
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  background: white;
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background:#f8819d;
+}
+.div-li {
+  list-style: none; /* Removes the bullet points */
+}
+li a {
+  text-decoration: none;
+  display: flex;          /* Make the link a flex container */
+  align-items: center;    /* Vertically center the icon and text */
+  gap: 20px;  
+  padding: 10px 35px 2px;
+  font-size: 20px;
+  color:white;             /* Add some space between the icon and text */
+}
+li a:hover{
+  color: #ff416c; 
+    text-decoration: underline; /* Underline appears on hover */
+    /* Text color on hover */
+}
+    
+
+#topbody-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 130vh;
+  background: linear-gradient(to right, #ff416c,#ff416c);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* Hide overflow for shapes */
+}
+
+
+#body {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+h1 {
+  color: #000;
+    font-size: 50px; 
+    /* Heading size */
+    font-weight: bold; 
+    /* Bold text */
+    padding-top: 80px;
+    
+  
+}
+
+p {
+ 
+  font-size: 1.2rem;
+  margin-top: 20px;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+.cta-banner {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 40px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.cta-banner p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.collection-button {
+  margin-top: 40px;
+  background-color: #fff; 
+  /* Button background color */
+  color: #000; 
+  /* Button text color */
+  padding: 15px 30px; 
+  /* Button padding */
+  border-radius: 30px; 
+  /* Rounded corners */
+  text-decoration: none; 
+  /* Remove underline from link */
+  font-weight: bold; 
+  /* Bold text */
+ 
+}
+
+/* Hover effect for the  button */
+.collection-button:hover {
+  background-color: white; 
+  /* Keep background color on hover */
+  cursor: pointer; 
+  /* Show pointer cursor on hover */
+  color: #ff416c; 
+  /* Text color change on hover */  
+  transition: background-color 0.3s ease;
+  /* Smooth background color change on hover */ 
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* Animated Shapes */
+.shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+  animation: float 6s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  left: 5%;
+  animation-duration: 8s;
+}
+
+.shape-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 15%;
+  right: 10%;
+  animation-duration: 10s;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+}
+/* Main stylists section */
+#stylists-category {
+  background-color:white;
+  color: #000;
+  margin-top:50px; /* Increase this if you need more space below the background */
+  padding: 50px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+  
+
+/* Section title */
+#stylists-category #title h1{
+  color: #000;
+  margin-bottom: 40px;
+  font-size: 66px;
+  font-weight: bold;
+}
+/* Container for the stylist cards */
+#stylist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the cards */
+  gap: 30px;              /* Space between cards */
+  width: 100%;      /* Wide enough for three cards per row */
+  margin: 0 auto;         /* Center the container */
+}
+/* Each card */
+#stylist-cards {
+  width: calc(33.33% - 30px); /* 3 cards in one row (minus the gap) */
+  min-width: 300px;           /* Don’t shrink below 300px on narrower screens */
+  background: #e7e7e7;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+/* Card image */
+#stylist-cards img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+/* Card text content */
+#stylist-cards #text {
+  padding: 20px;
+  text-align: center;
+}
+#stylist-cards #text h2 {
+  margin: 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+#stylist-cards #text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+/* Hover effect */
+#stylist-cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Trend Section Styling */
+#trend-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Space between items */
+  padding: 80px 20px;
+  background:white;
+  text-align: center;
+  color: white;
+}
+
+/* Individual trend boxes */
+#trend-body {
+  background: rgba(6, 6, 6, 0.065); /* Semi-transparent background */
+  padding: 10px 10px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgb(198, 198, 198);
+  min-width: 300px;
+  height: 150px; /* Ensures flexibility */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers content vertically */
+  text-align: center;
+  overflow: hidden; /* Prevents content from overflowing */
+}
+/* Hover effect: Lift and glow */
+#trend-body:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+}
+/* Number styling */
+#trend-body h1 {
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #ff416c; /* Eye-catching color */
+  
+}
+/* Description text */
+#trend-body p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 80px 0;
+}
+
+

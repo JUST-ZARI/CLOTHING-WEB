@@ -1,0 +1,287 @@
+
+/* Global reset for padding, margin, and box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with flexbox for centering the content */
+body {
+    display: flex;
+    min-height: 100vh; 
+    /* Full viewport height */
+    background:#fff; /* Background color */
+    align-items: center; 
+    /* Center content vertically */
+    justify-content: center;
+     /* Center content horizontally */
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #636363;
+    z-index: 1000;
+    box-shadow: 0 4px 8px #fcf9f9;
+  }
+  nav {
+      position: fixed; /* Keeps it at the top while scrolling */
+      width: 100%;
+      background-color: #222; /* Dark theme */
+      color: white;
+      padding: 15px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Spread content */
+      box-shadow: 0px 4px 10px #fcf9f9; /* Add shadow */
+      z-index: 1000; /* Ensures it's above other elements */
+  }
+  nav #web-namelogo h1{
+      color: white;
+      /* Logo color */
+      padding: 5px 35px 1px;
+      font-weight: 600;
+      font-size: 35px; 
+      /* Logo font size */
+  }
+  nav ul{
+    display: flex;
+      gap: 50px; 
+      /* Spacing between navigation links */
+  }
+  /* Styling for navigation links */
+  nav ul li a{
+    display: block;
+    padding: 10px 35px 2px;
+    font-size: 100%;
+    color: white;
+     /* Text color */
+    border-radius: 30px; 
+    /* Rounded corners */
+    transition: all 0.3s ease; 
+    /* Smooth transition for hover effect */
+    text-decoration: none;
+     /* Remove underline */
+  }
+  
+  nav ul li a:hover {
+      color: #ff416c; 
+      text-decoration: underline; /* Underline appears on hover */
+      /* Text color on hover */
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-toggle {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background: white;
+    text-align: center;
+  }
+  
+  .dropdown-item:hover {
+    background:#f8819d;
+  }
+  .div-li {
+    list-style: none; /* Removes the bullet points */
+  }
+  li a {
+    text-decoration: none;
+    display: flex;          /* Make the link a flex container */
+    align-items: center;    /* Vertically center the icon and text */
+    gap: 20px;  
+    padding: 10px 35px 2px;
+    font-size: 20px;
+    color:white;             /* Add some space between the icon and text */
+  }
+  li a:hover{
+    color: #ff416c; 
+      text-decoration: underline; /* Underline appears on hover */
+      /* Text color on hover */
+  }
+
+/* Wrapper styling for the registration/login form */
+.wrapper {
+    position: relative;
+    background: #fff; 
+    /* White background for the form */
+    padding: 34px;
+    /* Padding around the content */
+    max-width: 400px;
+     /* Max width for the form */
+    width: 100%; 
+    /* Full width inside the max width */
+    border-radius: 6px;
+     /* Rounded corners */
+     border: 1px solid #000;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+     /* Light shadow for depth */
+}
+
+/* Heading inside the form wrapper */
+.wrapper h2 {
+    position: relative;
+    font-weight: 600;
+     /* Semi-bold font */
+    color: #000;
+    /* Text color */
+    font-size: 39px;
+     /* Font size */
+}
+
+/* Styling the line under the heading */
+.wrapper h2::before {
+    content: ""; 
+    /* Empty content for the line */
+    height: 3px; 
+    /* Line height */
+    width: 28px; 
+    /* Line width */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #ff416c; /* Line color */
+    border-radius: 12px; 
+    /* Slightly rounded line */
+}
+
+/* Form container with top margin */
+.wrapper form {
+    margin-top: 30px; 
+    /* Space above the form */
+}
+
+/* Individual input boxes inside the form */
+.wrapper form .input-box {
+    margin: 10px 0; 
+    /* Space around each input box */
+    height: 35px; 
+    /* Height of the input box */
+    position: relative;
+    width: 300px; 
+    /* Fixed width for the input box */
+}
+
+/* Input field styling */
+form .input-box input {
+    outline: none; 
+    /* No outline on focus */
+    padding: 0 15px; 
+    /* Inner padding */
+    color: #000; 
+    /* Text color */
+    font-size: 17px; 
+    /* Font size */
+    border: 1.5px solid #c7bebe; 
+    /* Border color and thickness */
+    height: 100%; 
+    /* Full height of the input box */
+    width: 100%; 
+    /* Full width of the input box */
+    padding-right: 100px; 
+    /* Extra space for dropdown (if needed) */
+    box-sizing: border-box; 
+    /* Include padding and border in size */
+    border-bottom-width: 2.5px;
+     /* Thicker bottom border */
+    border-radius: 6px; 
+    /* Rounded corners */
+    transition: all 0.3s ease;
+     /* Smooth transition for border color */
+}
+
+/* Change border color when input is focused or valid */
+.input-box input:focus,
+.input-box input:valid {
+    border-color:#ff416c; 
+    /* Highlight color */
+}
+
+/* Form label (h1) inside the form */
+form h1 {
+    font-size: 15px; 
+    /* Font size for labels */
+    font-weight: 500;
+    /* Medium font weight */
+    color: #000; 
+    /* Label color */
+    margin-left: 10px; 
+    /* Indentation for label */
+}
+
+/* Button inside the input box */
+.input-box.button a input{
+    color: #fff;
+     /* Button text color */
+    border: none;
+     /* Remove border */
+    background:#ff416c; 
+    /* Button background color */
+    letter-spacing: 1px; 
+    /* Increase spacing between letters */
+    cursor: pointer; 
+    /* Pointer cursor on hover */
+}
+
+/* Hover effect for button */
+.input-box.button a:hover {
+    background:#ff416c; 
+    /* Keep background color */
+}
+
+/* Text inside the form (e.g. login/register link) */
+form .text h1 {
+    width: 100%; 
+    /* Full width */
+    color: #000; 
+    /* Text color */
+    text-align: center;
+     /* Center the text */
+}
+
+/* Styling the links inside the form (e.g. login/register link) */
+form.text h1 a {
+    text-decoration: none; 
+    /* Remove underline from link */
+    color:#ff416c; 
+    /* Link color */
+}
+
+/* Hover effect for links inside the form */
+form.text h1 a:hover {
+    text-decoration: underline; 
+    /* Add underline on hover */
+}

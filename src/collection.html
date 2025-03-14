@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/allcss/collection.css">
+    <script src="https://kit.fontawesome.com/f096034737.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+        <!--WEB NAME AND LOGO-->
+        <div id="web-namelogo">
+           <h1>TrendAura</h1>  
+        </div>
+        <!--NAV LINKS-->
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="collection.html">Shop</a></li>
+            <li><a href="">View</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
+
+       <!-- Dropdown for Sign In / Log In -->
+<div class="dropdown">
+  <button class="dropdown-toggle">
+    <i class="fa-solid fa-user"></i> Account
+  </button>
+  <div class="dropdown-menu">
+    <a href="signup.html" class="dropdown-item">Sign Up</a>
+    <a href="login.html" class="dropdown-item">Log In</a>
+  </div>
+</div>
+
+      
+        <div class="div-li">
+          <li>
+              <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+              </a>
+            </li>
+          </div>
+       
+    </nav>
+</header>
+
+
+<div class="sidebar">
+    <h2>Browse By:</h2>
+    <ul class="sidebar-menu">
+      <li><a href="#" data-filter="all">All</a></li>
+      <li><a href="#" >Men's Clothing</a></li>
+      <li><a href="#" >Women's Clothing</a></li>
+      <li><a href="#" >Kids' Clothing</a></li>
+      <li><a href="#" >Accessories</a></li>
+      <li><a href="#" >Sale</a></li>
+      
+    </ul>
+
+    <!-- Size Selection Checkboxes -->
+    <!-- Size Guide Section -->
+    <div class="size-guide">
+      <h2>Size Guide</h2>
+      <p>Select your size to see the measurements:</p>
+      <select class="size-dropdown">
+        <option value="" disabled selected>Select-size</option>
+        <option value="S">Small (S)</option>
+        <option value="M">Medium (M)</option>
+        <option value="L">Large (L)</option>
+        <option value="XL">Extra Large (XL)</option>
+      </select>
+      <div class="size-measurements" style="display: none;">
+        <h3>Measurements:</h3>
+        <p><strong>Chest:</strong> <span id="chest"></span></p>
+        <p><strong>Waist:</strong> <span id="waist"></span></p>
+        <p><strong>Hips:</strong> <span id="hips"></span></p>
+      </div>
+    </div>
+  
+    <!-- Discounts or Promo Codes Section -->
+    <div class="discounts">
+      <h2>Discounts & Offers</h2>
+      <div class="promo-code">
+        <label for="promo-code">Have a promo code?</label>
+        <input type="text" id="promo-code" placeholder="Enter promo code" />
+        <button class="apply-promo">Apply</button>
+      </div>
+      
+    </div>
+
+  </div>
+
+
+  
+
+  <div class="main-content">
+<!-- Search Bar -->
+<div class="search-bar">
+  <input type="text" placeholder="Search products..." class="search-input">
+  <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+</div>
+
+    <h1>All Products</h1>
+    <div class="product-container">
+
+      <div id="product-cards">
+        <img src="/images/pexels-brandon-ricketts-450464466-15674990.jpg" alt="">
+        <div id="text">
+          <h2>I'm a product</h2>
+          <p>Product Description</p>
+          <p>$45.00</p>
+          <p>Category:Women</p>
+          <a href="cart.html">Add to Cart</a>
+        </div>
+    </div>
+
+    <div id="product-cards">
+      <img src="/images/pexels-jessicairoh-15226338.jpg" alt="">
+      <div id="text">
+        <h2>I'm a product</h2>
+        <p>Product Description</p>
+        <p>$45.00</p>
+        <p>Category:Women</p>
+        <a href="cart.html">Add to Cart</a>
+      </div>
+  </div>
+
+  <div id="product-cards">
+    <img src="/images/pexels-kish-1488463.jpg" alt="">
+    <div id="text">
+      <h2>I'm a product</h2>
+      <p>Product Description</p>
+      <p>$45.00</p>
+      <p>Category:Women</p>
+      <a href="cart.html">Add to Cart</a>
+    </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-jessicairoh-15226338.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-bllack-artist-150088058-18913153.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-3923130-5851808.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+     
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-jessicairoh-15226338.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-bllack-artist-150088058-18913153.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-bllack-artist-150088058-18913153.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-jessicairoh-15226338.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-bllack-artist-150088058-18913153.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-bllack-artist-150088058-18913153.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-jessicairoh-15226338.jpg" alt="">
+  <div id="text">
+      <h2>I'm a product</h2>
+      <p>Product Description</p>
+      <p>$45.00</p>
+      <p>Category:Women</p>
+      <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-bllack-artist-150088058-18913153.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+<div id="product-cards">
+  <img src="/images/pexels-bllack-artist-150088058-18913153.jpg" alt="">
+  <div id="text">
+    <h2>I'm a product</h2>
+    <p>Product Description</p>
+    <p>$45.00</p>
+    <p>Category:Women</p>
+    <a href="cart.html">Add to Cart</a>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+
+<script src="/alljs/display.js"></script>
+
+    
+</body>
+</html>

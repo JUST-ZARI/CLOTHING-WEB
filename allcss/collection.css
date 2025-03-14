@@ -1,0 +1,331 @@
+/*Global reset*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        
+    
+    }
+    header{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #636363;
+      z-index: 1000;
+      box-shadow: 0 4px 8px #fcf9f9;
+    }
+    nav {
+        position: fixed; /* Keeps it at the top while scrolling */
+        width: 100%;
+        background-color: #222; /* Dark theme */
+        color: white;
+        padding: 15px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Spread content */
+        box-shadow: 0px 4px 10px #fcf9f9; /* Add shadow */
+        z-index: 1000; /* Ensures it's above other elements */
+    }
+    nav #web-namelogo h1{
+        color: white;
+        /* Logo color */
+        padding: 10px 35px 1px;
+        font-weight: 600;
+        font-size: 35px; 
+        /* Logo font size */
+    }
+    nav ul{
+      display: flex;
+        gap: 50px; 
+        /* Spacing between navigation links */
+    }
+    /* Styling for navigation links */
+    nav ul li a{
+      display: block;
+      padding: 10px 35px 2px;
+      font-size: 100%;
+      color: white;
+       /* Text color */
+      border-radius: 30px; 
+      /* Rounded corners */
+      transition: all 0.3s ease; 
+      /* Smooth transition for hover effect */
+      text-decoration: none;
+       /* Remove underline */
+    }
+    
+    nav ul li a:hover {
+        color: #ff416c; 
+        text-decoration: underline; /* Underline appears on hover */
+        /* Text color on hover */
+    }
+    
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    .dropdown-toggle {
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 5px;
+    }
+  
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: white;
+      min-width: 150px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 1000;
+    }
+  
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  
+    .dropdown-item {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+      background: white;
+      text-align: center;
+    }
+  
+    .dropdown-item:hover {
+      background:linear-gradient(#ff416c ,#ff4b2b);
+    }
+    .div-li {
+      list-style: none; /* Removes the bullet points */
+    }
+    li a {
+      text-decoration: none;
+      display: flex;          /* Make the link a flex container */
+      align-items: center;    /* Vertically center the icon and text */
+      gap: 20px;  
+      padding: 10px 35px 2px;
+      font-size: 20px;
+      color:white;             /* Add some space between the icon and text */
+    }
+    li a:hover{
+      color: #ff416c; 
+        text-decoration: underline; /* Underline appears on hover */
+        /* Text color on hover */
+    }
+        
+    
+    
+    .sidebar {
+      position:fixed;
+        width: 250px;
+        margin-top: 40px;
+        background-color:white;
+        color: #ff416c;
+        padding: 50px;
+        height: 100vh; /* Full height */
+        box-sizing: border-box;
+        overflow-y: auto; /* Scrollable */
+      }
+      
+      .sidebar h2 {
+        margin-bottom: 20px;
+        font-size: 27px;
+        display: inline-block;
+        padding-bottom: 20px; /* Space between text and line */
+        position: relative; /* Needed for the pseudo-element */
+      }
+      .sidebar h2::after{
+          content: ''; /* Required for the pseudo-element to render */
+          display: block; /* Makes it a block-level element */
+          width: 120%; /* Makes the line span the full width of the text */
+          height: 2px; /* Sets the thickness of the line */
+          background-color: #ff416c; /* Sets the color of the line */
+          position: absolute; /* Positions the line relative to the h2 */
+          left: 0; /* Aligns the line to the left edge of the h2 */
+          bottom: 4px; /* Moves the line 10px below the text */
+      
+      }
+      
+      .sidebar-menu li {
+        margin-bottom: 10px;
+      }
+      
+      .sidebar-menu li a {
+        color: #1d4ff1;
+        font-size: 0.9rem;
+        line-height: 0.9;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .sidebar-menu li a:hover {
+        color: #ff416c; /* Change to your preferred hover color */
+      }
+      .size-guide h2 {
+        margin-bottom: 20px;
+        font-size: 27px;
+        display: inline-block;
+        padding-bottom: 30px; /* Space between text and line */
+        position: relative; /* Needed for the pseudo-element */
+      }
+      .sidebar h2::after{
+          content: ''; /* Required for the pseudo-element to render */
+          display: block; /* Makes it a block-level element */
+          width: 120%; /* Makes the line span the full width of the text */
+          height: 2px; /* Sets the thickness of the line */
+          background-color: #ff416c; /* Sets the color of the line */
+          position: absolute; /* Positions the line relative to the h2 */
+          left: 0; /* Aligns the line to the left edge of the h2 */
+          bottom: 4px; /* Moves the line 10px below the text */
+      
+      }
+      
+      .size-guide p{
+          margin-bottom: 20px;
+         color: #007bff;
+        }
+        
+        
+        .size-dropdown {
+          width: 100%;
+          padding: 8px;
+          margin-top: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+        
+        .size-measurements {
+          margin-top: 15px;
+          padding: 10px;
+          background-color: #f9f9f9;
+          border: 1px solid #ddd;
+          border-radius: 4;
+        }
+        .apply-promo{
+          margin-top: 20px;
+        }
+    .main-content {
+        margin-left: 260px;
+        padding: 20px;
+        background-color: #f4f4f4;
+      } 
+
+      /* Search Bar Styling */
+.search-bar {
+  background-color:white;
+  display: flex;
+  align-items: center;
+  margin-top: 120px;
+  margin-bottom: 10px;
+  max-width: 500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* Ensures it remains in the normal document flow */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 15px;
+  background-color: #ff416c;
+  color: black;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.search-button i {
+  font-size: 16px;
+}
+      .main-content h1{
+        color: #1d4ff1;
+      font-size: 90; 
+      margin-top: 100px;
+      font-size: 28px; /* Adjust the size */
+    font-weight: bold; /* Make it bold */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Make text uppercase (optional) */
+    margin-bottom: 80px; /* Add spacing below the title */
+    position: relative; /* Needed for underline effect */
+}
+      
+      
+      /* Container for the stylist cards */
+   .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards */
+    gap: 30px;              /* Space between cards */
+    width: 100%;      /* Wide enough for three cards per row */
+   }
+  /* Each card */
+  #product-cards {
+    width: calc(33.33% - 30px); /* 3 cards in one row (minus the gap) */
+    min-width: 270px;           /* Don’t shrink below 300px on narrower screens */
+    background: #e7e7e7;
+    border-radius: 0px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  /* Card image */
+  #product-cards img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  /* Card text content */
+  #product-cards #text {
+    padding: 20px;
+    text-align: center;
+  }
+  #product-cards #text h2 {
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  #product-cards #text p {
+    font-size: 16px;
+    color: #000;
+    line-height: 1;
+  }
+  #product-cards a{
+    text-decoration: none;
+    color: #1d4ff1;
+  }
+  /* Hover effect */
+  #product-cards:hover {
+    transform: translateX(-0.5px);
+    box-shadow: 0 8px 16px rgba(90, 9, 9, 0.2);
+  }
+  
+      
